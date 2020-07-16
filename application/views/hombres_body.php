@@ -17,7 +17,7 @@
       <!-- Main content -->
       <section class="content">
         
-        
+        <h2>Esta es una modificación</h2>
 
       </section>
       <!-- /.content -->
