@@ -27,9 +27,10 @@
             <?
             if ($cities!=false){
               ?>
-              <table class="table table-hover table-bordered table-striped" >
+              <table class="table table-hover table-bordered table-striped" id="example1">
                 <thead>
                   <tr>
+                    <th>&nbsp;</th>
                     <th>No.</th>
                     <th>Ciudad</th>
                     <th>Población</th>
@@ -40,8 +41,8 @@
               $contador = 0;
               //echo "Si hay ciudades";
               foreach ($cities->result() as $city) {
-                echo "<tr><td>".++$contador."</td><td>$city->Name</td><td>$city->Population</td></tr>";
-                if ($contador>20) {
+                echo "<tr><td><button type='button' class='btn btn-lg btn-info btn-agregar' id='btn-agregar-$contador'><i class='fa fa-cart-plus'></i></button></td><td>".++$contador."</td><td>$city->Name</td><td>$city->Population</td></tr>";
+                if ($contador>100) {
                   break;
                 }
               }
